@@ -5,7 +5,7 @@ Projeto de Big Data Analytics
 `BANCO DE DADOS`
 `2025/01`
 
-Este repositório contém um conjunto de dados abrangente sobre o comércio internacional do Brasil, com informações detalhadas sobre as operações de importação e exportação entre 1997 e 2021. Os dados foram extraídos do Comex Stat, uma plataforma oficial do Ministério da Indústria, Comércio Exterior e Serviços (MDIC), e foram organizados em um formato SQLite para facilitar o acesso e análise.
+Este *repositório* contém um conjunto de dados abrangente sobre o comércio internacional do Brasil, com informações detalhadas sobre as operações de importação e exportação entre 1997 e 2021. Os dados foram extraídos do Comex Stat, uma plataforma oficial do Ministério da Indústria, Comércio Exterior e Serviços (MDIC), e foram organizados em um formato SQLite para facilitar o acesso e análise.
 
 ## Descrição do Conjunto de Dados
 O conjunto de dados abrange informações de importação e exportação, incluindo dados como ano, mês, produtos (classificados pelo código NCM), valores de mercadorias, quantidades e outras variáveis relevantes.
