@@ -33,7 +33,7 @@ O arquivo contém 8 tabelas organizadas em SQLite. Abaixo estão as descrições
 ## Integrantes
 * Alexandre Guzmán Siácara
 * Ana Paula de Moraes
-* Douglas Pereira Martin
+* Douglas Pereira Martins
 * Gustavo Zagnoli
 * Lucas Mamede Pacheco Novais
 * Matheus Augusto Venancio Andrade
