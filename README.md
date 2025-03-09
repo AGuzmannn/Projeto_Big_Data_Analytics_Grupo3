@@ -1,34 +1,35 @@
 # Eixo-4
 Projeto de Big Data Analytics
 
-# DADOS DE IMPORTAÇÃO E EXPORTAÇÃO DO BRASIL
+# CONSULTORIA CODECAFÉ – ANÁLISE DE DADOS PARA EXPANSÃO INTERNACIONAL
 `BANCO DE DADOS`
 `2025/01`
 
-Este *repositório* contém um conjunto de dados abrangente sobre o comércio internacional do Brasil, com informações detalhadas sobre as operações de importação e exportação entre 1997 e 2021. Os dados foram extraídos do Comex Stat, uma plataforma oficial do Ministério da Indústria, Comércio Exterior e Serviços (MDIC), e foram organizados em um formato SQLite para facilitar o acesso e análise.
+## Descrição do Projeto
+A Consultoria CodeCafé foi contratada pela COOPCAES para ajudar na expansão de sua atuação no mercado internacional, focando na comercialização de cafés especiais beneficiados. O projeto visa fornecer uma análise detalhada do mercado, identificar oportunidades, definir estratégias de preços e as certificações necessárias para otimizar a exportação. A CodeCafé, com sua equipe especializada e infraestrutura moderna, atuará como intermediária entre a cooperativa e compradores internacionais, buscando maximizar as oportunidades de negócios.
 
-## Descrição do Conjunto de Dados
-O conjunto de dados abrange informações de importação e exportação, incluindo dados como ano, mês, produtos (classificados pelo código NCM), valores de mercadorias, quantidades e outras variáveis relevantes.
+### Principais Desafios Identificados:
 
-## Estrutura dos Dados
-O arquivo contém 8 tabelas organizadas em SQLite. Abaixo estão as descrições dos principais campos:
+#### Desconhecimento do mercado internacional: A cooperativa enfrenta dificuldades em identificar quais mercados externos demandam cafés especiais e como se diferenciar da concorrência.
 
-* ###### **CO_ANO:** Ano da operação comercial (1997 a 2021).
-* ###### **CO_MES:** Código do mês da operação comercial (1: Janeiro a 12: Dezembro).
-* ###### **CO_NCM:** Código NCM (Nomenclatura Comum Mercosul), utilizado para identificar produtos comercializados no Brasil e no Mercosul.
-* ###### **CO_UNID:** Código da Unidade de Medida Estatística, utilizado para padronizar a medição dos produtos (por exemplo, quilogramas, metros, litros, pares, toneladas, etc.).
-* ###### **CO_PAIS:** Código do país com o qual a operação comercial foi realizada (importação ou exportação).
-* ###### **SG_UF_NCM:** Sigla da Unidade Federativa (estado) de origem (na exportação) ou destino (na importação) da mercadoria.
-* ###### **CO_VIA:** Código que identifica o meio de transporte utilizado (aéreo, marítimo, rodoviário, ferroviário, entre outros).
-* ###### **CO_URF:** Código da Unidade da Receita Federal, responsável pela execução dos procedimentos aduaneiros.
-* ###### **QT_ESTAT:** Quantidade estatística do produto, expressa em unidades ou pesos (quilos, pares, dúzias, etc.).
-* ###### **KG_LIQUIDO:** Peso líquido da mercadoria, expresso em quilogramas, desconsiderando embalagem ou outros adicionais de transporte.
+* ##### Falta de informações sobre preços e competição: Não há clareza sobre o posicionamento de preços e a concorrência nos mercados internacionais.
+  
+* ##### Barreiras regulatórias e certificações: A cooperativa carece de conhecimento sobre as exigências de certificação e regulamentação necessárias para a exportação.
 
-* ###### **VL_FOB**: Valor FOB (Free on Board), indicando o preço da mercadoria em dólares americanos (US$) sob a modalidade FOB, onde o vendedor assume o custo de embarque e o comprador arca com o transporte e seguros pós-embarque.
+  
+### Metodologia de Trabalho: A CodeCafé utilizará uma abordagem analítica para realizar a pesquisa de mercado e fornecer recomendações estratégicas. As atividades principais incluem:
 
-### Tabelas Relacionadas
-###### **NCM_UNIDADE:** Relaciona cada NCM com sua unidade estatística correspondente.
-###### **CO_ANO_MES:** Tabela com o código de ano e mês das operações comerciais
+* ##### Mapeamento de Destinos: Identificar os principais países importadores de café especial do Brasil, com ênfase em cafés já beneficiados, e avaliar a demanda crescente.
+  
+* ##### Análise de Preço e Volume: Estudar os preços médios pagos por mercados internacionais e o volume de café exportado para diferentes regiões.
+  
+* ##### Identificação de Tendências: Analisar padrões de demanda e sazonalidade para identificar mercados em expansão ou com potencial de crescimento para cafés especiais.
+  
+* ##### Análise de Concorrência: Estudar outros exportadores de café e suas estratégias de posicionamento para entender como a cooperativa pode se destacar.
+
+  
+A CodeCafé também ajudará na elaboração de uma estratégia de diferenciação para que o café da cooperativa se destaque nos mercados internacionais. A consultoria abordará desde as questões de logística e documentação alfandegária até a capacitação em certificações internacionais necessárias para garantir a competitividade dos produtos.
+
 
 ## Integrantes
 * Alexandre Guzmán Siácara
