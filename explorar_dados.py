@@ -3,8 +3,11 @@
 
 import pandas as pd
 
+# Nome do arquivo .parquet (pode ser alterado conforme necessário)
+nome_arquivo = 'exp_completa_filtrado.parquet'
+
 # Caminho para o arquivo .parquet
-caminho_arquivo = 'Projeto_Big_Data_Analytics_Grupo3\Tabelas\exp_completa_filtrado.parquet'
+caminho_arquivo = f'Projeto_Big_Data_Analytics_Grupo3/Tabelas/{nome_arquivo}'
 
 # Ler o arquivo .parquet
 df = pd.read_parquet(caminho_arquivo)
