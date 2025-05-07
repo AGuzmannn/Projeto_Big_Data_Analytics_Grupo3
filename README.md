@@ -1,9 +1,28 @@
-# Eixo-4
-Projeto de Big Data Analytics
+# Projeto de Big Data Analytics: Consultoria CodeCafé – Análise de Dados para Expansão Internacional
 
-# CONSULTORIA CODECAFÉ – ANÁLISE DE DADOS PARA EXPANSÃO INTERNACIONAL
-`BANCO DE DADOS`
-`2025/01`
+`UNIVERSIDADE CATÓLICA DE MINAS GERAIS`
+
+`INSTITUTO DE CIÊNCIAS EXATAS E INFORMÁTICA`
+
+`CURSO: Tecnologia em Banco de Dados`
+
+`DISCIPLINA: Projeto - Big Data Analytics`
+
+`SEMESTRE: 4º`
+
+<p align="justify">
+Este projeto objetiva colocar um engenheiro de dados em formação em contato com algumas das principais ferramentas de uma infraestrutura moderna de dados, organizando-as em um processo de Big Data Analytics. No contexto de uma sociedade cada vez mais digital e conectada, a quantidade de dados tem crescido rapidamente (velocidade), originando-se nos sistemas de informação que amparam os negócios, nos sensores de Internet das Coisas (IoT), nas redes sociais que utilizam diferentes mídias como texto, imagem, vídeo e áudio (variedade) e em grande quantidade (volume). Estes três Vs tradicionalmente caracterizam o Big Data. E a necessidade de levá-los à condição de serem analisados é papel de um Engenheiro de Dados.</p>
+
+# Planejamento
+
+| Etapa         | Atividades |
+|  :----:   | ----------- |
+| DOCUMENTO       |[Documentação das etapas](doc/context.md) <br> |
+| ETAPA 1         |Definição do grupo de trabalho e do objeto do projeto. <br> |
+| ETAPA 2         |Replicação e Integração dos dados. <br> |
+| ETAPA 3         |Orquestração do pipeline de dados. |
+| ETAPA 4         |Observabilidade e monitoria dos dados. <br>  |
+| ETAPA 5         |Análise e Visualização de dados. <br>  |
 
 ## Descrição do Projeto
 A Consultoria CodeCafé foi contratada pela COOPCAES para ajudar na expansão de sua atuação no mercado internacional, focando na comercialização de cafés especiais beneficiados. O projeto visa fornecer uma análise detalhada do mercado, identificar oportunidades, definir estratégias de preços e as certificações necessárias para otimizar a exportação. A CodeCafé, com sua equipe especializada e infraestrutura moderna, atuará como intermediária entre a cooperativa e compradores internacionais, buscando maximizar as oportunidades de negócios.
@@ -39,5 +58,5 @@ A CodeCafé também ajudará na elaboração de uma estratégia de diferenciaç�
 * Lucas Mamede Pacheco Novais
 * Matheus Augusto Venancio Andrade
 
-## Orientador
-* Prof. Marco Paulo
+## Professor orientador
+* Marco Paulo Soares Gomes
