@@ -62,8 +62,7 @@ A imagem a seguir demonstra o fluxo para pipeline do projeto que corresponde à 
 
 <p align="center">Imagem 1 - Diagrama da Arquitetura.</p>
 
-COLOCAR IMAGEM 1
-
+![Diagrama Arquitetura](../img/imagem.jpg)
 
 **Fonte:** Elaborado pelos autores
 
@@ -86,9 +85,9 @@ A imagem abaixo ilustra as etapas de processamento dos dados desde a origem até
 
 <p align="center">Imagem 2 - Pipeline de dados.</p>
 
-COLOCAR IMAGEM 2
+![Pipeline de dados](../img/imagem.jpg)
 
-Fonte: Elaborado pelos autores
+**Fonte:** Elaborado pelos autores
 
 ## 5. ORQUESTRAÇÃO DO PIPELINE DE DADOS
 
@@ -101,46 +100,47 @@ Após a transformação, os dados são arquivados em uma pasta no bucket do "Ama
 
     <p align="center">Imagem 3 - Fonte dos dados, site Kaggle.</p>
 
-    COLOCAR IMAGEM 3
+    ![site Kaggle](../img/download_kaggle.jpg)
 
 3.  Durante a instalação da base de dados, identificamos que o arquivo estava no formato ".db", compatível apenas com o SQLite. Para resolver isso, utilizamos a ferramenta DB Browser (Imagem 4), que permite a leitura de arquivos com essa extensão. Com ela, conseguimos converter os dados em múltiplos arquivos .csv, facilitando sua manipulação.
 
     <p align="center">Imagem 4 - Conversão do formato do arquivo de “.db” para “.csv” no DB Browser for SQLite.</p>
 
-    COLOCAR IMAGEM 4
+    ![conversão db csv](../img/conversão_db_csv.jpg)
 
 5.  No ambiente AWS, provisionamos um bucket no Amazon S3 para armazenamento dos arquivos “.csv”.
 
     <p align="center">Imagem 5 - Criação do bucket no S3.</p>
 
-COLOCAR IMAGEM 5
+    ![criação bucket](../img/criação_bucket.jpg)
 
 6.  Foram criadas duas pastas no ambiente S3: uma para armazenar os arquivos .csv originais (denominada Dados Brutos) e outra para receber os dados processados após a transformação via ETL (intitulada Dados Para Análise). Essa estrutura permite a separação clara entre os dados em seu estado inicial e os dados prontos para consumo analítico.
 
     <p align="center">Imagem 6 - Criação de pastas no bucket do S3.</p>
 
+    ![criação pastas](../img/criação_pastas.jpg)
 
 7.  Optou-se pela implementação do processo ETL utilizando o AWS Glue, empregando scripts em Python com a API do PySpark para o processamento distribuído dos dados. A imagem 7 mostra o ambiente onde digitamos o script.
 
     <p align="center">Imagem 7 - Script utilizando linguagem Python no AWS Glue para o processamento da base de dados.</p>
 
-COLOCAR IMAGEM 7
+    ![interface glue](../img/interface_glue.jpg)
 
-<p align="center">Imagem 8 - Script completo.</p>
+    <p align="center">Imagem 8 - Script completo.</p>
 
-COLOCAR IMAGEM 8
+    ![script completo](../img/script_completo.jpg)
 
 8.  O script desenvolvido consolida todas as informações em uma única partição, otimizando a integração com o Power BI. Embora o AWS utilize particionamento distribuído por padrão para melhorar a eficiência no processamento de grandes volumes de dados, optamos por uma abordagem monolítica neste caso específico para facilitar o consumo e análise no Power BI.
 
     <p align="center">Imagem 9 - Arquivo .csv gerado pelo script no AWS Glue a partir da base de dados.</p>
 
-     COLOCAR IMAGEM 9
+    ![csv final](../img/csv_final.jpg)
 
     Na imagem 9 é possível observar o arquivo “.csv” resultante do processo dessa etapa.
 
     <p align="center">Imagem 10 - Visualização no Excel do arquivo .csv gerado pelo AWS Glue.</p>
 
-COLOCOR IMAGEM 10
+    ![csv final analise](../img/csv_final_analise.jpg)
 
 ## REFERÊNCIAS:
 
