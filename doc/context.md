@@ -85,7 +85,7 @@ A imagem abaixo ilustra as etapas de processamento dos dados desde a origem até
 
 <p align="center">Imagem 2 - Pipeline de dados.</p>
 
-![Pipeline de dados](../img/pipeline_dados.jpg)
+![Pipeline de dados](../img/pipeline_dado.jpg)
 
 **Fonte:** Elaborado pelos autores
 
