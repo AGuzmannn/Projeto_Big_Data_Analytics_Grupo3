@@ -62,7 +62,7 @@ A imagem a seguir demonstra o fluxo para pipeline do projeto que corresponde à 
 
 <p align="center">Imagem 1 - Diagrama da Arquitetura.</p>
 
-![Diagrama Arquitetura](../img/imagem.jpg)
+![Diagrama Arquitetura](../img/diagrama_arquitetura.jpg)
 
 **Fonte:** Elaborado pelos autores
 
@@ -85,7 +85,7 @@ A imagem abaixo ilustra as etapas de processamento dos dados desde a origem até
 
 <p align="center">Imagem 2 - Pipeline de dados.</p>
 
-![Pipeline de dados](../img/imagem.jpg)
+![Pipeline de dados](../img/pipeline_dados.jpg)
 
 **Fonte:** Elaborado pelos autores
 
