@@ -224,7 +224,7 @@ As Imagens 14 e 15 apresentadas a seguir trazem o detalhamento, em nível de uso
 
 <p align="center">Imagem 15 - Cálculo AWS Glue</p>
 
-![Cálculo AWS Glue]().
+![Cálculo AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/calculoAWSGlue15.jpg).
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
