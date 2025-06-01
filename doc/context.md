@@ -201,7 +201,7 @@ A consultoria CodeCafé utiliza essa calculadora para estimar previamente os gas
 
 <p align="center">Imagem 13 - Estimativa de gastos</p>
 
-![Estimativa de gastos](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/Or%C3%A7amento_AWS%20Calculator_Codecaf%C3%A9.pdf).
+![Estimativa de gastos](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/Or%C3%A7amento_AWS%20Calculator_Codecaf%C3%A9.pdf)
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
@@ -216,10 +216,14 @@ Após o processamento do ETL, os dados são gravados novamente no S3, onde perma
 As Imagens 14 e 15 apresentadas a seguir trazem o detalhamento, em nível de uso, para os dois serviços utilizados, considerados no orçamento total.
 
 <p align="center">Imagem 14 - Cálculo AWS Glue<br>
+    
+![Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg).
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
 <p align="center">Imagem 15 - Cálculo AWS Glue</p>
+
+![Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg).
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
