@@ -175,12 +175,16 @@ Considerando a relação direta entre o diagrama projetado para execução do pi
 As imagens abaixo, extraídas do painel do Amazon CloudWatch, apontam para o acompanhamento adequado desses indicadores, oferecendo visibilidade sobre o desempenho do pipeline.
 
 <p align="center">Imagem 11 - Volume de dados armazenados no bucket S3</p>
+
  ![ Volume de dados armazenados no bucket S3](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/dadosBucket%20S3.jpeg)
+
 <p align="center">Fonte: AWS - Amazon CloudWatch</p>
 
 <p align="center">Imagem 12 - Uso de recursos na AWS Glue</p>
- !Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg)
- <p align="center">Fonte: AWS - Amazon CloudWatch</p>
+
+![Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg).
+
+<p align="center">Fonte: AWS - Amazon CloudWatch</p>
 
 A Imagem 11 apresenta os volumes de dados armazenados no bucket utilizado no projeto e evidencia o crescimento do repositório dos dados transformados. A Imagem 12 mostra os níveis de uso dos recursos do serviço AWS Glue, deixando evidente o baixo consumo durante as execuções do job.
 Ainda que seja um processo simplificado, o monitoramento se mostra como um recurso muito importante, uma vez que esse acompanhamento garante não apenas a integridade das execuções, mas também subsidia eventuais ajustes e decisões futuras para uma eventual escalabilidade do projeto.
@@ -196,7 +200,9 @@ A AWS disponibiliza em seu site a **AWS Pricing Calculator**, uma ferramenta gra
 A consultoria CodeCafé utiliza essa calculadora para estimar previamente os gastos que poderão incorrer com a infraestrutura em nuvem necessária à execução do projeto para a Cooperativa COOPCAES. A Imagem 13 apresenta uma previsão de orçamento com projeção mensal e anual, considerando o nível de consumo estimado dos principais serviços utilizados. Os cálculos apresentam valores em dólar americano (US$).
 
 <p align="center">Imagem 13 - Estimativa de gastos</p>
+
 ![Estimativa de gastos](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/Or%C3%A7amento_AWS%20Calculator_Codecaf%C3%A9.pdf).
+
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
 A estimativa de gastos foi projetada considerando o uso dos dois serviços que serão consumidos pelo projeto de consultoria para a cooperativa COOPCAES. A escolha pela **região Norte da Virgínia (US East - N. Virgínia, us-east-1)** se justifica por se tratar de uma das principais e mais econômicas regiões da AWS, especialmente em comparação com regiões no Brasil, como São Paulo.
