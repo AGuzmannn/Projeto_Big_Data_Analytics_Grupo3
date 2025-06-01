@@ -217,13 +217,13 @@ As Imagens 14 e 15 apresentadas a seguir trazem o detalhamento, em nível de uso
 
 <p align="center">Imagem 14 - Cálculo AWS Glue<br>
     
-![Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg).
+![Cálculo AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/calculoAWSGlue13.jpg).
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
 <p align="center">Imagem 15 - Cálculo AWS Glue</p>
 
-![Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg).
+![Cálculo AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg).
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
 
