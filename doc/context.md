@@ -174,13 +174,13 @@ Considerando a relação direta entre o diagrama projetado para execução do pi
 
 As imagens abaixo, extraídas do painel do Amazon CloudWatch, apontam para o acompanhamento adequado desses indicadores, oferecendo visibilidade sobre o desempenho do pipeline.
 
-<p align="center">Imagem 11 - Volume de dados armazenados no bucket S3<br>Fonte: AWS - Amazon CloudWatch</p>
-
+<p align="center">Imagem 11 - Volume de dados armazenados no bucket S3</p>
  ![ Volume de dados armazenados no bucket S3](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/dadosBucket%20S3.jpeg)
+<p align="center">Fonte: AWS - Amazon CloudWatch</p>
 
-<p align="center">Imagem 12 - Uso de recursos na AWS Glue<br>Fonte: AWS - Amazon CloudWatch</p>
-
- ![ Volume de dados armazenados no bucket S3](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg)
+<p align="center">Imagem 12 - Uso de recursos na AWS Glue</p>
+ !Uso de recursos na AWS Glue](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/recursosAWSGlue.jpeg)
+ <p align="center">Fonte: AWS - Amazon CloudWatch</p>
 
 A Imagem 11 apresenta os volumes de dados armazenados no bucket utilizado no projeto e evidencia o crescimento do repositório dos dados transformados. A Imagem 12 mostra os níveis de uso dos recursos do serviço AWS Glue, deixando evidente o baixo consumo durante as execuções do job.
 Ainda que seja um processo simplificado, o monitoramento se mostra como um recurso muito importante, uma vez que esse acompanhamento garante não apenas a integridade das execuções, mas também subsidia eventuais ajustes e decisões futuras para uma eventual escalabilidade do projeto.
@@ -195,7 +195,9 @@ A AWS disponibiliza em seu site a **AWS Pricing Calculator**, uma ferramenta gra
 
 A consultoria CodeCafé utiliza essa calculadora para estimar previamente os gastos que poderão incorrer com a infraestrutura em nuvem necessária à execução do projeto para a Cooperativa COOPCAES. A Imagem 13 apresenta uma previsão de orçamento com projeção mensal e anual, considerando o nível de consumo estimado dos principais serviços utilizados. Os cálculos apresentam valores em dólar americano (US$).
 
-<p align="center">Imagem 13 - Estimativa de gastos<br>Fonte: AWS Pricing Calculator</p>
+<p align="center">Imagem 13 - Estimativa de gastos</p>
+![Estimativa de gastos](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/Or%C3%A7amento_AWS%20Calculator_Codecaf%C3%A9.pdf).
+<p align="center">Fonte: AWS Pricing Calculator</p>
 
 A estimativa de gastos foi projetada considerando o uso dos dois serviços que serão consumidos pelo projeto de consultoria para a cooperativa COOPCAES. A escolha pela **região Norte da Virgínia (US East - N. Virgínia, us-east-1)** se justifica por se tratar de uma das principais e mais econômicas regiões da AWS, especialmente em comparação com regiões no Brasil, como São Paulo.
 
@@ -207,9 +209,13 @@ Após o processamento do ETL, os dados são gravados novamente no S3, onde perma
 
 As Imagens 14 e 15 apresentadas a seguir trazem o detalhamento, em nível de uso, para os dois serviços utilizados, considerados no orçamento total.
 
-<p align="center">Imagem 14 - Cálculo AWS Glue<br>Fonte: AWS Pricing Calculator</p>
+<p align="center">Imagem 14 - Cálculo AWS Glue<br>
 
-<p align="center">Imagem 15 - Cálculo AWS Glue<br>Fonte: AWS Pricing Calculator</p>
+<p align="center">Fonte: AWS Pricing Calculator</p>
+
+<p align="center">Imagem 15 - Cálculo AWS Glue</p>
+
+<p align="center">Fonte: AWS Pricing Calculator</p>
 
 A estimativa de gastos calculada com a AWS Pricing Calculator fica disponível para consultas e eventuais ajustes, caso seja necessário reconfigurar os serviços a serem utilizados ou inserir novos serviços. A AWS permite gerar um link compartilhável que possibilita recuperar o cálculo e que fica disponível por um ano. A estimativa pode ser consultada em [https://calculator.aws/#/estimate?nc2=h_ql_pr_calc&id=23cae91c93072dbac23399780e07ff9645be8f1a](https://calculator.aws/#/estimate?nc2=h_ql_pr_calc&id=23cae91c93072dbac23399780e07ff9645be8f1a).
 
