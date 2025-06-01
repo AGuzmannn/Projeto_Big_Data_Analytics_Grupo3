@@ -142,19 +142,95 @@ Após a transformação, os dados são arquivados em uma pasta no bucket do "Ama
 
     ![csv final analise](../img/csv_final_analise.jpg)
 
+**Fonte:** Microsoft Excel
+
+A tabela final, resultante da orquestração, reúne atributos essenciais para a compreensão do comportamento das exportações de cafés especiais. O arquivo **`.csv` consolidado** compreende uma base de dados que reúne **informações valiosas distribuídas em 17 colunas** sobre o comércio internacional do produto. Dentre os campos disponíveis, destacam-se:
+
+* **País de destino**
+* **Via de transporte utilizada**
+* **Porto ou unidade de despacho aduaneiro**
+* **Peso líquido exportado**
+* **Valor FOB da operação**
+* **Ano e mês da operação** (podem possibilitar explorar sazonalidades e tendências ao longo do tempo)
+
+Conforme mostrado na **Imagem 08**, a exploração dos dados de suas bases originais manteve o foco em **cafés especiais**, identificados pelos códigos NCM **9012100** e **9012200**. Essa classificação, conforme consulta ao portal da Receita Federal do Brasil - RFB, refere-se à **Nomenclatura Comum do Mercosul (NCM)**, um sistema padronizado utilizado pelos países do bloco para categorizar mercadorias em operações de comércio exterior, com base na Nomenclatura do Sistema Harmonizado (SH). (RECEITA FEDERAL DO BRASIL- RFB, 2025)
+
+O código NCM **9012100** corresponde ao “café em grão, não torrado, não descafeinado”, enquanto o código NCM **9012200** refere-se ao “café em grão, descafeinado, não torrado”. Ambos são **produtos beneficiados**, representativos de cafés especiais que, por suas características de qualidade superior e tratamento diferenciado, possuem maior valor agregado no mercado internacional.
+
+Ao restringir a análise a essas duas categorias, o projeto direciona seu foco ao **segmento-alvo da Cooperativa COOPCAES** e mantém-se alinhado ao objetivo central da CodeCafé, fornecendo uma pesquisa qualificada sobre o mercado de cafés especiais. Isso permite aprofundar o entendimento sobre o comportamento das exportações de cafés especiais, trazendo informações estratégicas que subsidiam uma atuação mais eficaz da cooperativa no cenário internacional.
+
+---
+
+## 6. OBSERVAÇÃO E MONITORIA DOS DADOS
+
+A etapa de observação e monitoria tem como finalidade garantir a **rastreabilidade, consistência e desempenho do pipeline de dados** implementado. Para isso, a ferramenta escolhida foi o **Amazon CloudWatch**, serviço nativo da AWS voltado para o monitoramento e análise de métricas e logs.
+
+O Amazon CloudWatch permite coletar e visualizar, em tempo real, informações críticas sobre o ambiente de execução, facilitando a identificação de falhas e inconsistências ao longo do pipeline de dados. Caso seja necessário, é possível ainda criar alarmes personalizados para o acompanhamento proativo dos indicadores definidos no projeto.
+
+Considerando a relação direta entre o diagrama projetado para execução do pipeline de dados e o consumo associado, o resultado do processo aponta para um fluxo bem mais simplificado que envolve apenas a **ingestão de arquivos CSV no Amazon S3, sua transformação via AWS Glue e o armazenamento final em um bucket no S3**. Isso se reflete em métricas mais enxutas e precisas. Como o projeto passou a utilizar basicamente dois serviços da AWS, o nível de complexidade do pipeline diminuiu significativamente e, consequentemente, não há grande volume de recursos a serem acompanhados, especialmente por se tratar de ingestão única de dados. Por esse motivo, a observação ficou mais simplificada, focando apenas em métricas essenciais como uso de recursos do Glue e volume de armazenamento no S3, sem a necessidade de monitorar múltiplas camadas ou componentes adicionais. Sendo assim, os indicadores monitorados no projeto correspondem a:
+
+* **Uso de recursos computacionais do AWS Glue (job):** monitorados por meio de métricas de uso percentual, que apresentaram valores mínimos como **0.05%**, indicando execução eficiente e sem sobrecarga.
+* **Volume de dados armazenados em buckets S3:** monitorando o número de objetos e o tamanho total armazenado no bucket. O bucket do projeto indica uso de **2,82GB e 8,96 objetos armazenados**.
+
+As imagens abaixo, extraídas do painel do Amazon CloudWatch, apontam para o acompanhamento adequado desses indicadores, oferecendo visibilidade sobre o desempenho do pipeline.
+
+<p align="center">Imagem 11 - Volume de dados armazenados no bucket S3<br>Fonte: AWS - Amazon CloudWatch</p>
+
+<p align="center">Imagem 12 - Uso de recursos na AWS Glue<br>Fonte: AWS - Amazon CloudWatch</p>
+
+A Imagem 11 apresenta os volumes de dados armazenados no bucket utilizado no projeto e evidencia o crescimento do repositório dos dados transformados. A Imagem 12 mostra os níveis de uso dos recursos do serviço AWS Glue, deixando evidente o baixo consumo durante as execuções do job.
+Ainda que seja um processo simplificado, o monitoramento se mostra como um recurso muito importante, uma vez que esse acompanhamento garante não apenas a integridade das execuções, mas também subsidia eventuais ajustes e decisões futuras para uma eventual escalabilidade do projeto.
+
+---
+
+## 5.1 Custos dos serviços em nuvem
+
+A utilização de serviços em nuvem oferece uma série de vantagens como **flexibilidade, escalabilidade e o uso de recursos sob demanda**. No entanto, é importante manter um **controle rigoroso dos custos**, por meio de um planejamento financeiro adequado, a fim de evitar gastos desnecessários que possam comprometer a continuidade do projeto.
+
+A AWS disponibiliza em seu site a **AWS Pricing Calculator**, uma ferramenta gratuita que possibilita estimar o custo dos serviços da AWS com base nos recursos que pretende usar. O serviço pode ser acessado pelo link [https://calculator.aws.amazon.com/](https://calculator.aws.amazon.com/).
+
+A consultoria CodeCafé utiliza essa calculadora para estimar previamente os gastos que poderão incorrer com a infraestrutura em nuvem necessária à execução do projeto para a Cooperativa COOPCAES. A Imagem 13 apresenta uma previsão de orçamento com projeção mensal e anual, considerando o nível de consumo estimado dos principais serviços utilizados. Os cálculos apresentam valores em dólar americano (US$).
+
+<p align="center">Imagem 13 - Estimativa de gastos<br>Fonte: AWS Pricing Calculator</p>
+
+A estimativa de gastos foi projetada considerando o uso dos dois serviços que serão consumidos pelo projeto de consultoria para a cooperativa COOPCAES. A escolha pela **região Norte da Virgínia (US East - N. Virgínia, us-east-1)** se justifica por se tratar de uma das principais e mais econômicas regiões da AWS, especialmente em comparação com regiões no Brasil, como São Paulo.
+
+No caso do consumo relacionado ao uso do AWS Glue, não foram consideradas a frequência da execução dos Jobs, pois, considerando a especificidade do projeto, a ingestão dos dados e tratamento para análise (ETL) deverão acontecer uma única vez e, portanto, não haverá rotina de tratamento periodicamente. Por outro lado, se o Job for executado mais de uma vez, o custo do processamento, estimado em **US$ 0.15**, aumentará em razão de cada processamento.
+
+No caso da projeção de consumo de recursos do Amazon S3, foram considerados apenas o gasto para **armazenamento (5GB/mês)**. Para esse projeto, especificamente, não haverá cobrança relacionada à **Transferência de Entrada**. Na AWS, a transferência de entrada é gratuita para a maioria das regiões e, ainda, no caso específico, os dados serão carregados manualmente no S3.
+
+Após o processamento do ETL, os dados são gravados novamente no S3, onde permanecem disponíveis para serem baixados e servirão como insumo em ferramentas de análise posteriormente. Na AWS, não há cobrança relacionada à transferência de saída caso os dados permaneçam na mesma região AWS. Para transferência de saída para a internet, como no caso de download para máquina local, a AWS disponibiliza até o limite de **1GB/mês gratuitamente**; depois desse limite, é cobrado **US$ 0.09 por GB**. O volume de dados gerados/baixados nesse projeto não deve alcançar esse limite.
+
+As Imagens 14 e 15 apresentadas a seguir trazem o detalhamento, em nível de uso, para os dois serviços utilizados, considerados no orçamento total.
+
+<p align="center">Imagem 14 - Cálculo AWS Glue<br>Fonte: AWS Pricing Calculator</p>
+
+<p align="center">Imagem 15 - Cálculo AWS Glue<br>Fonte: AWS Pricing Calculator</p>
+
+A estimativa de gastos calculada com a AWS Pricing Calculator fica disponível para consultas e eventuais ajustes, caso seja necessário reconfigurar os serviços a serem utilizados ou inserir novos serviços. A AWS permite gerar um link compartilhável que possibilita recuperar o cálculo e que fica disponível por um ano. A estimativa pode ser consultada em [https://calculator.aws/#/estimate?nc2=h_ql_pr_calc&id=23cae91c93072dbac23399780e07ff9645be8f1a](https://calculator.aws/#/estimate?nc2=h_ql_pr_calc&id=23cae91c93072dbac23399780e07ff9645be8f1a).
+
+Assim como nas etapas anteriores, toda a documentação do projeto permanece centralizada em um repositório único, no GitHub. O orçamento em PDF e o link recuperável da estimativa realizada via AWS Pricing Calculator também constam no repositório para consultas e edições futuras. O repositório pode ser consultado em [https://github.com/guzcv99/Projeto_Big_Data_Analytics_Grupo3](https://github.com/guzcv99/Projeto_Big_Data_Analytics_Grupo3).
+
+---
+
 ## REFERÊNCIAS:
 
 PONTIFÍCIA UNIVERSIDADE CATÓLICA DE MINAS GERAIS. Pró-Reitoria de Graduação. Sistema Integrado de Bibliotecas. **Orientações para elaboração de projetos de pesquisa, trabalhos acadêmicos, relatórios técnicos e/ou científicos e artigos científicos: conforme a Associação Brasileira de Normas Técnicas (ABNT).** 5. ed. Belo Horizonte: PUC Minas, 2023. Disponível em: [www.pucminas.br/biblioteca](www.pucminas.br/biblioteca). Acesso em: 08/03/2024.
 
-CECAFÉ. **Sobre o Café/História do Café - CONSELHO DOS EXPORTADORES DE CAFÉ DO BRASIL.** Site oficial. Disponível em: [https://www.cecafe.com.br/sobre-o-cafe/historia-do-cafe](https://www.cecafe.com.br/sobre-o-cafe/historia-do-cafe). Acesso em: 08/03/ 2025.
+CECAFÉ. **Sobre o Café/História do Café - CONSELHO DOS EXPORTADORES DE CAFÉ DO BRASIL.** Site oficial. Disponível em: [https://www.cecafe.com.br/sobre-o-cafe/historia-do-cafe](https://www.cecafe.com.br/sobre-o-cafe/historia-do-cafe). Acesso em: 08/03/2025.
 
 LACHMANN. **Conheça mais sobre a história de exportação do café no Brasil.** 2023. Disponível em: [https://www.lachmann.com.br/conheca-mais-sobre-a-historia-de-exportacao-do-cafe-no-brasil/](https://www.lachmann.com.br/conheca-mais-sobre-a-historia-de-exportacao-do-cafe-no-brasil/). Acesso em 08/03/2025.
 
-**Dataset: Data of Brazilian Import and Export data.** Disponível em: [https://www.kaggle.com/datasets/juniorfazzio/data-of-brazilian-import-and-export-data](https://www.kaggle.com/datasets/juniorfazzio/data-of-brazilian-import-and-export-data). Acesso em 8/03/2025.
+**Dataset: Data of Brazilian Import and Export data.** Disponível em: [https://www.kaggle.com/datasets/juniorfazzio/data-of-brazilian-import-and-export-data](https://www.kaggle.com/datasets/juniorfazzio/data-of-brazilian-import-and-export-data). Acesso em 08/03/2025.
 
-**Documentação do serviço de banco de dados relacional da Amazon.** Disponível em: [https://aws.amazon.com/pt/documentation-overview/relational-database-service/](https://aws.amazon.com/pt/documentation-overview/relational-database-service/). Acesso em 28/03/25.
+**Documentação do serviço de banco de dados relacional da Amazon.** Disponível em: [https://aws.amazon.com/pt/documentation-overview/relational-database-service/](https://aws.amazon.com/pt/documentation-overview/relational-database-service/). Acesso em 28/03/2025.
 
-**O que é Integração de dados AWS.** Artigo disponível em : [https://aws.amazon.com/pt/what-is/data-integration/](https://aws.amazon.com/pt/what-is/data-integration/). Acesso em 28/03/25.
+**O que é Integração de dados AWS.** Artigo disponível em: [https://aws.amazon.com/pt/what-is/data-integration/](https://aws.amazon.com/pt/what-is/data-integration/). Acesso em 28/03/2025.
 
-**Documentação do AWS Glue.** Artigo disponível em:
-[https://docs.aws.amazon.com/pt_br/glue](https://docs.aws.amazon.com/pt_br/glue). Acesso em 30/4/2025.
+**Documentação do AWS Glue.** Artigo disponível em: [https://docs.aws.amazon.com/pt_br/glue](https://docs.aws.amazon.com/pt_br/glue). Acesso em 30/04/2025.
+
+**Receita Federal do Brasil RFB: Download NCM - Nomenclatura Comum do Mercosul.** Disponível em: [https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/classificacao-fiscal-de-mercadorias/download-ncm-nomenclatura-comum-do-mercosul](https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/classificacao-fiscal-de-mercadorias/download-ncm-nomenclatura-comum-do-mercosul). Acesso em 15/03/2025.
+
+**Calculadora de preços da AWS - Estime o custo para sua solução de arquitetura.** Disponível em: [https://calculator.aws/#/?nc2=h_ql_pr_calc](https://calculator.aws/#/?nc2=h_ql_pr_calc). Acesso em 01/06/2025.
+
+**Documentação do Amazon CloudWatch.** Artigo disponível em: [https://docs.aws.amazon.com/pt_br/cloudwatch/](https://docs.aws.amazon.com/pt_br/cloudwatch/). Acesso em 01/06/2025.
