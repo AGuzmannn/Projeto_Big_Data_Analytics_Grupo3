@@ -201,7 +201,7 @@ A consultoria CodeCafé utiliza essa calculadora para estimar previamente os gas
 
 <p align="center">Imagem 13 - Estimativa de gastos</p>
 
-![Estimativa de gastos](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/Or%C3%A7amento_AWS%20Calculator_Codecaf%C3%A9.pdf).
+![Estimativa de gastos](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/Or%C3%A7amento_AWS%20Calculator_Codecaf%C3%A9_page-0001.jpg).
 
 
 <p align="center">Fonte: AWS Pricing Calculator</p>
