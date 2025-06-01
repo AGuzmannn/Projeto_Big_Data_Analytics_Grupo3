@@ -176,7 +176,11 @@ As imagens abaixo, extraídas do painel do Amazon CloudWatch, apontam para o aco
 
 <p align="center">Imagem 11 - Volume de dados armazenados no bucket S3<br>Fonte: AWS - Amazon CloudWatch</p>
 
+ ![ Volume de dados armazenados no bucket S3](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/dadosBucket%20S3.jpeg)
+
 <p align="center">Imagem 12 - Uso de recursos na AWS Glue<br>Fonte: AWS - Amazon CloudWatch</p>
+
+ ![ Volume de dados armazenados no bucket S3](https://github.com/AGuzmannn/Projeto_Big_Data_Analytics_Grupo3/blob/main/img/dadosBucket%20S3.jpeg)
 
 A Imagem 11 apresenta os volumes de dados armazenados no bucket utilizado no projeto e evidencia o crescimento do repositório dos dados transformados. A Imagem 12 mostra os níveis de uso dos recursos do serviço AWS Glue, deixando evidente o baixo consumo durante as execuções do job.
 Ainda que seja um processo simplificado, o monitoramento se mostra como um recurso muito importante, uma vez que esse acompanhamento garante não apenas a integridade das execuções, mas também subsidia eventuais ajustes e decisões futuras para uma eventual escalabilidade do projeto.
